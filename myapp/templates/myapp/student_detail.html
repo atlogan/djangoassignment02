@@ -1,0 +1,7 @@
+{% extends 'myapp/base_template.html' %}
+{% block title%}{{ student.name}}{% endblock title%}
+{% block content%} 
+<p>Name: {{student.name}}</p>
+<p>Major: {{student.major}}</p>
+<p>Enrollment Date: {{student.enrollment_date}}</p>
+{% endblock content%}
