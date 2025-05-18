@@ -25,10 +25,10 @@ class StudentUpdateView(UpdateView):
     fields = ['name', 'major', 'enrollment_date'] # Specify fields
     success_url = reverse_lazy('student_list') # Redirect after successful update
 
-
-"""
 class StudentDeleteView(DeleteView):
     model = Student
     template_name = 'myapp/student_confirm_delete.html' # Optional: Defaults to myapp/student_confirm_delete.html
-    success_url = reverse_lazy('myapp:student_list') # Redirect after successful deletion
+    success_url = reverse_lazy('student_list') # Redirect after successful deletion
+
+"""
  """
