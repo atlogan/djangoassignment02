@@ -10,7 +10,6 @@ class Student(models.Model):
 
 
 class Instructor(models.Model):
-    instructor_id = models.CharField(max_length=10, primary_key=True)
     name = models.CharField(max_length=100)
     department = models.CharField(max_length=50)
 
@@ -19,7 +18,6 @@ class Instructor(models.Model):
 
 
 class Course(models.Model):
-    course_id = models.CharField(max_length=10, primary_key=True)
     course_name = models.CharField(max_length=100)
     credits = models.IntegerField()
 
@@ -28,7 +26,6 @@ class Course(models.Model):
 
 
 class Class(models.Model):
-    class_id = models.CharField(max_length=10, primary_key=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)
     schedule = models.CharField(max_length=100)
